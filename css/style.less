@@ -1,0 +1,242 @@
+/* Palette Notes: pink: f930b3, orange: ff6b08, purple: 6300f8 */
+@jonpink: #f930b3;
+@jonorange: #ff6b08;
+@jonpurple: #6300f8;
+
+@font-face {
+    font-family:CircularBook;
+    src: url(fonts/CircularStd-Book.otf);
+}
+
+@font-face {
+    font-family:CircularBlack;
+    src: url(fonts/CircularStd-Black.otf);
+}
+
+@font-face {
+    font-family:CircularBold;
+    src: url(fonts/CircularStd-Bold_0.otf);
+}
+
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 6vh;
+}
+
+nav a{
+    padding: 1.5vw;
+    font-family: CircularBold;
+    color: #ff6b08;
+    font-size: 1.75vw;
+    transition: all .5s ease-out;
+}
+
+nav a:hover{
+    color: #6300f8;
+    font-size: 2vw;
+    transition: all .5s ease-out;
+}
+
+#container{
+    perspective: 20px;
+    height: 30vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainsplash{
+    text-align: center;
+     transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+    
+}
+
+#mainsplash p {
+    font-family: CircularBold;
+    font-size:3vw;
+    margin:0;
+}
+
+h1 {
+    font-family: CircularBlack;
+    font-size: 15vw;
+    margin:0;
+}
+
+#mainsplash {
+  text-align: center;
+
+  background: linear-gradient(to right, @jonorange 10%, @jonpink 20%, @jonorange 30%, @jonpurple 50%, @jonorange 90%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 16s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+}
+
+
+h2{
+    font-family: CircularBold;
+    font-size: 6.5vw;
+    color: white;
+    position:relative;
+    transform: translate(0,80%);
+     &.right_aligned_text{
+         text-align: right;
+         transform:translate(-2%,80%);
+    }
+    &.left_aligned_text{
+        margin-left: 2%;
+    }
+    
+}
+
+.sections{
+    height: 25vw;
+    h2{
+        transition: all .2s ease-out;
+    }
+    
+}
+
+#colorist{
+    background-image: url(../img/green-arrow-and-black-canary.png);
+    background-position:0vw -15vw;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all .2s ease-out;
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+    &:hover{
+        background-position:0 -18vw;
+        background-image:url(../img/spideyflames.png);
+        transition: all .2s ease-out;
+    }
+}
+#illustrator{
+    background-image: url(../img/s7.png);
+       background-position: 45vw -7vw;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-color: #93DED7;
+    transition: all .2s ease-out;
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 75%);
+     &:hover{
+        background-size: 100%;
+        background-position: 0vw -18vw;
+        background-image:url(../img/erlkoenig.png);
+        transition: all .2s ease-out;
+    }
+}
+#graphics{
+    background-image: url(../img/tumblr_o4zahkE6am1vqrovuo1_1280.jpg);
+       background-position:0vw -25vw;
+    background-size: 100%;
+    transition: all .2s ease-out;
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+     &:hover{
+        background-position: 0vw -44vw;
+         background-size: 110%;
+        background-image:url(../img/splish.png);
+        transition: all .2s ease-out;
+    }
+}
+
+footer{
+    margin-top: 10vw;
+    font-family: CircularBook;
+    text-align: left;
+    color: white;
+    padding: 7vw;
+    background-color:@jonpurple;
+    height: 34vw;
+    
+    h3{
+      font-size: 4vw;
+        line-height: 0px;
+    }
+    p{
+        font-size: 2.5vw;
+        padding: 0px;
+        margin:0px;
+        margin-bottom: 2vw;
+        line-height: 3.5vw;
+    }
+    #email{
+        font-size: 2vw;
+        transition: all .2s ease-out;
+        &:hover{
+            color:@jonorange;
+            transition: all .2s ease-out;
+        }
+        
+    }
+    
+    
+    .socialmedia{
+        padding-top: 1vw;
+        display:flex;
+        height: 6vw;
+        & a{
+            font-size: 3vw;
+            padding: 1vw;                            
+            transition: all .2s ease-out;
+        }
+        & a:hover {
+                transform: scale(1.5,1.5);
+                transition: all .2s ease-out;
+                color: @jonorange;
+            }
+    }
+    
+    .cuties {
+        float:right;
+        position: absolute;
+        margin-top: -53vw;
+        margin-left: 45vw;
+        img{
+        width: 10vw;
+        }
+        #hammer{
+            width: 16vw;
+            margin-left: -10vw;
+        }
+        #lamp{
+            width:39vw;
+            margin-left: -32vw;
+        }
+        #potato,#hotdog{
+            position:relative;
+            z-index: 1;
+        }
+        #hotdog{
+            width:14vw;
+        }
+        
+    }
+    
+    #sitecredit{
+        font-size: 1.5vw;
+        text-align:center;
+        margin-top: 10vw;
+        color: @jonpink;
+    }
+
+    
+}
+
+
+    
