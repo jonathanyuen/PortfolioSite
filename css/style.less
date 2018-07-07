@@ -39,6 +39,10 @@ nav a:hover{
     transition: all .5s ease-out;
 }
 
+#hamburger{
+    display:none;
+}
+
 #container{
     perspective: 20px;
     height: 30vw;
@@ -235,6 +239,100 @@ footer{
         color: @jonpink;
     }
 
+    
+}
+
+@media only screen and (max-width: 640px){
+    
+    nav a{
+        display: none;
+        transition: all .2s ease-out;
+
+    }
+    
+    #hamburger{
+        display: block;
+        color: @jonorange;
+        font-size: 6vw;
+        padding-bottom: 10px;
+    }
+    nav{
+        position: absolute;
+        margin-top: -10px;
+        z-index: 5000000;
+        display:block;
+        text-align: left;
+        padding: 10px;
+        transition: all .2s ease-out;
+        
+        
+
+        &:hover a{
+            display:block;
+            font-size: 6vw;
+            float:none;
+            transition: all .2s ease-out;
+            color: white;
+            z-index: 3;
+            padding:10px;
+            padding-left:0px;
+        }
+        &:hover{
+            background-color: @jonorange;
+            color:white;
+            height: 90vw;
+            transition: all .2s ease-out;
+            & #hamburger{
+                color: White;
+            }
+        }
+        float:none;
+        & a:hover{
+            font-size: 10vw;
+        }
+    }
+    footer{
+        
+        h3{
+            font-size: 6vw;
+        }
+        
+         p{
+        font-size: 4vw;
+        line-height: 5vw;
+        }
+        
+        #email{
+            font-size: 3vw;
+        }
+
+
+        .socialmedia{
+            padding-top: 1vw;
+            display:flex;
+            height: 6vw;
+            & a{
+                font-size: 6vw;
+                padding: 3vw;                            
+                transition: all .2s ease-out;
+            }
+            & a:hover {
+                    transform: scale(1.5,1.5);
+                    transition: all .2s ease-out;
+                    color: @jonorange;
+                }
+        }
+        .cuties{
+        transform: translate(-20vw,55vw) scale(1.5,1.5);
+        }
+    
+        height: 104vw;
+        
+        #sitecredit{
+            transform: translate(0vw,60vw);
+        }
+    }
+    
     
 }
 

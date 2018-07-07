@@ -30,6 +30,9 @@ nav a:hover {
   font-size: 2vw;
   transition: all 0.5s ease-out;
 }
+#hamburger {
+  display: none;
+}
 #container {
   perspective: 20px;
   height: 30vw;
@@ -204,4 +207,82 @@ footer #sitecredit {
   text-align: center;
   margin-top: 10vw;
   color: #f930b3;
+}
+@media only screen and (max-width: 640px) {
+  nav a {
+    display: none;
+    transition: all 0.2s ease-out;
+  }
+  #hamburger {
+    display: block;
+    color: #ff6b08;
+    font-size: 6vw;
+    padding-bottom: 10px;
+  }
+  nav {
+    position: absolute;
+    margin-top: -10px;
+    z-index: 5000000;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    transition: all 0.2s ease-out;
+    float: none;
+  }
+  nav:hover a {
+    display: block;
+    font-size: 6vw;
+    float: none;
+    transition: all 0.2s ease-out;
+    color: white;
+    z-index: 3;
+    padding: 10px;
+    padding-left: 0px;
+  }
+  nav:hover {
+    background-color: #ff6b08;
+    color: white;
+    height: 90vw;
+    transition: all 0.2s ease-out;
+  }
+  nav:hover #hamburger {
+    color: White;
+  }
+  nav a:hover {
+    font-size: 10vw;
+  }
+  footer {
+    height: 104vw;
+  }
+  footer h3 {
+    font-size: 6vw;
+  }
+  footer p {
+    font-size: 4vw;
+    line-height: 5vw;
+  }
+  footer #email {
+    font-size: 3vw;
+  }
+  footer .socialmedia {
+    padding-top: 1vw;
+    display: flex;
+    height: 6vw;
+  }
+  footer .socialmedia a {
+    font-size: 6vw;
+    padding: 3vw;
+    transition: all 0.2s ease-out;
+  }
+  footer .socialmedia a:hover {
+    transform: scale(1.5, 1.5);
+    transition: all 0.2s ease-out;
+    color: #ff6b08;
+  }
+  footer .cuties {
+    transform: translate(-20vw, 55vw) scale(1.5, 1.5);
+  }
+  footer #sitecredit {
+    transform: translate(0vw, 60vw);
+  }
 }
